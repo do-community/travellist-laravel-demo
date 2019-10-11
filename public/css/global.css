@@ -34,7 +34,7 @@ h2 {
     color: #FFF;
 }
 
-.map_container {
+.map_container, .form_container {
     background-color: #3d4852;
     margin-bottom: 60px;
     padding: 20px;
@@ -88,13 +88,33 @@ h2 {
 }
 
 .photo {
-    background-color: #3d4852;
+    background-color: #F5F5F5;
     padding: 20px;
     float: left;
     margin: 10px;
     width: 300px;
+    text-align: center;
+    color: #333333;
+    border: 1px solid #1b1e21;
 }
 
 .photo img {
     width: 100%;
+    border: 1px solid #c4c4c4;
+}
+
+.form_container {
+    color: #FFFFFF;
+}
+
+input.text {
+    border: 1px solid #3d4852;
+    background-color: #F0F0F0;
+    font-size: medium;
+    padding: 6px;
+    margin: 2px;
+}
+
+h2 a {
+    color: #d3d9df;
 }
