@@ -1,20 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Storage;
-use App\Place;
-use App\Photo;
 
-Route::get('/', function () {
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
 
-    $visited = Place::where('visited', 1)->get();
-    $togo = Place::where('visited', 0)->get();
+Route::get('/', 'MainController@main')->name('Main');
 
-    $files = Storage::disk('public')->files('/photos');
-    $photos = [];
-    foreach ($files as $file) {
-        $photos[] = [ 'file' => $file, 'url' => Storage::disk('public')->url($file) ];
-    }
-    
-    return view('travel_list', ['visited' => $visited, 'togo' => $togo, 'photos' => $photos ] );
-})->name('Main');
+Route::get('/upload', 'PhotoController@uploadForm')->name('Upload.form');
+
+Route::post('/upload', 'PhotoController@uploadPhoto')->name('Upload');
