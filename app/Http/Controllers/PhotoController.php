@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Photo;
 use App\Place;
+use Illuminate\Support\Facades\Storage;
 
 class PhotoController extends Controller
 {
@@ -34,7 +35,8 @@ class PhotoController extends Controller
         $place->save();
 
         $photo->place()->associate($place);
-        $photo->image = $request->image->store('/', 'public');
+        $photo->image = $request->image->store('/', 'spaces');
+        Storage::setVisibility($photo->image, 'public');
         $photo->save();
 
         return redirect()->route('Main');

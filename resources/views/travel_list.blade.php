@@ -40,7 +40,7 @@
     <h2>Travel Photos <small>[ <a href="{{ route('Upload.form') }}">Upload Photo</a> ]</small></h2>
     @foreach ($photos as $photo)
         <div class="photo">
-            <img src="{{ asset('storage') . '/' . $photo->image }}" />
+            <img src="{{ Storage::disk('spaces')->url($photo->image) }}" />
             <p>{{ $photo->place->name }}</p>
         </div>
     @endforeach
