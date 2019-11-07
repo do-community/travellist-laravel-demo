@@ -36,7 +36,7 @@ class PhotoController extends Controller
 
         $photo->place()->associate($place);
         $photo->image = $request->image->store('/', 'spaces');
-        Storage::setVisibility($photo->image, 'public');
+        Storage::cloud()->setVisibility($photo->image, 'public');
         $photo->save();
 
         return redirect()->route('Main');
