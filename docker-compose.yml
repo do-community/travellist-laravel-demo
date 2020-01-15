@@ -28,7 +28,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
-      - ./docker-compose/mysql:/docker-entrypoint-initdb.d:ro
+      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks:
       - travellist
 
@@ -40,12 +40,10 @@ services:
       - 8000:80
     volumes:
       - ./:/var/www
-      - ./docker-compose/nginx:/etc/nginx/conf.d/:ro
+      - ./docker-compose/nginx:/etc/nginx/conf.d
     networks:
       - travellist
 
 networks:
   travellist:
     driver: bridge
-
-
