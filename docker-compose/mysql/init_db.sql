@@ -7,4 +7,4 @@ CREATE TABLE `places` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `places` VALUES (1,'Berlin',0),(2,'Budapest',0),(3,'Cincinati',1),(4,'Denver',0),(5,'Helsinki',0),(6,'Lisbon',0),(7,'Moscow',1),(8,'Nairobi',0),(9,'Oslo',1),(10,'Rio',0),(11,'Tokyo',0);
+INSERT INTO `places` (name, visited) VALUES ('Berlin',0),('Budapest',0),('Cincinnati',1),('Denver',0),('Helsinki',0),('Lisbon',0),('Moscow',1),('Nairobi',0),('Oslo',1),('Rio',0),('Tokyo',0);
