@@ -39,7 +39,7 @@
 @section('footer')
     <div class="footer">
         <p>
-            <a href="https://github.com/do-community/travellist-laravel-demo" target="_blank" title="Source Code on Github">Travellist Laravel Demo</a>
+            <a href="https://github.com/do-community/travellist-laravel-demo/tree/tutorial-04" target="_blank" title="Source Code on Github">Travellist Laravel Demo</a>
         </p>
     </div>
 @endsection
