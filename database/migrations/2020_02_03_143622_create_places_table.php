@@ -18,6 +18,8 @@ class CreatePlacesTable extends Migration
             $table->string('name', 100);
             $table->boolean('visited')->default(0);
             $table->timestamps();
+            $table->float('lat');
+            $table->float('lng');
         });
     }
 

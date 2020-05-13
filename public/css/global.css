@@ -1,0 +1,103 @@
+body {
+    background-color: #1b1e21;
+    font-family: 'Hind', sans-serif;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.column {
+    float: left;
+}
+
+.x3 {
+    width: 30%;
+}
+.x5 {
+    width: 50%;
+}
+.x7 {
+    width: 70%;
+}
+
+h1 {
+    color: #FFF;
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 4em;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #FFF;
+}
+
+.map_container, .form_container {
+    background-color: #3d4852;
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+.map {
+    margin-left: 20px;
+    height: 400px;
+}
+
+.list {
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+}
+
+.list li {
+    padding: 4px 8px;
+    background-color: #FFFFFF;
+    color: #0b2e13;
+    margin: 1px;
+    display: block;
+    text-decoration: none;
+
+}
+
+.list li.header {
+    background-color: #2b414b;
+    color: #F0F0F0;
+    font-size: 1.5em;
+    padding-left: 30px;
+}
+
+.visited {
+    background: url("/img/marker_visited.png") no-repeat center left;
+}
+
+.togo {
+    background: url("/img/marker_togo.png") no-repeat center left;
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.footer {
+    margin-bottom: 60px;
+}
+
+.footer p {
+    text-align: center;
+    color: #636b6f;
+    font-size: small;
+}
+
+.footer p a {
+    text-decoration: none;
+    color: #636b6f;
+}
+
+.footer p a:hover {
+    text-decoration: underline;
+}
